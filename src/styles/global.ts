@@ -2,16 +2,19 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 :root{
-         --background: #f0f2f5;
-      --red: #e52e4d;
-     --blue: #5429cc;
-     --green: #33cc95;
+    --background: #f0f2f5;
+    --red: #e52e4d;
+    --blue: #5429cc;
+    --green: #33cc95;
 
-     --blue-light: #6933ff;
+    --blue-light: #6933ff;
 
-     --shape: #ffff;
-     --text-title: #363f5f;
-     --text-body: #969cb2; 
+    --shape: #ffff;
+    --text-title: #363f5f;
+    --text-body: #969cb2; 
+
+    --border-input: #d7d7d7;
+    --background-input: #e7e9ee;
 }
 
 *{
@@ -45,6 +48,41 @@ h1, h2, h3, h4, h5, h6, strong {
 
 button{
     cursor: pointer;
+}
+
+.react-modal-overlay{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    position: fixed; // faz tomar a tela inteira
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.react-modal-content{
+    display: flex;
+    width: 100%;
+    max-width: 576px;
+    background: var(--background);
+
+    position: relative;
+
+    padding: 3rem;
+    border: 0; 
+     border-radius: .025rem;
+}
+.react-modal-close{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5 rem;
+
+    border:0;
+    background:transparent;
+
 }
 
 `;
